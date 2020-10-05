@@ -40,7 +40,8 @@ class EssayForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert(keyWordExtractor(this.state.value));
+    wordList = keyWordExtractor(this.state.value);
+    drawcoudkfj
 
     //event.preventDefault();
   }
