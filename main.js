@@ -60,7 +60,6 @@ function handler(wordsList) {
   });
   console.log(sortable[0]);
 
-  
   for (var i = 0; i < sortable.length;i++) {
     var word = sortable[i];
     const size = word[1] / min_freq * baseSize;
