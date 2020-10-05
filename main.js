@@ -45,22 +45,32 @@ function handler(wordsList) {
       min_freq = table[word]
     }
   }
-  console.log(table);
-  console.log(min_freq);
   var startX = 10;
   var startY = 100;
   var draw = document.getElementById("canvas");
   var ctx = draw.getContext("2d");
   
+  var sortable = [];
   for (const word in table) {
-    const size = table[word] / min_freq * baseSize;
+      sortable.push([word, table[word]]);
+  }
+
+  sortable.sort(function(a, b) {
+      return b[1] - a[1];
+  });
+  console.log(sortable[0]);
+
+  
+  for (var i = 0; i < sortable.length;i++) {
+    var word = sortable[i];
+    const size = word[1] / min_freq * baseSize;
     ctx.font =  size.toString() + "px Georgia";
-    ctx.fillText(word, startX, startY);
-    startX += 10 *size;
+    ctx.fillText(word[0], startX, startY);
+    startX += 5 *size;
     if (startX > 800) {
       startY += 20;
       startX = 10;
     }
   }
-    
+  
 }
