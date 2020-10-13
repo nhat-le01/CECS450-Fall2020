@@ -13,19 +13,26 @@
 			font:normal 1.4em/2em Georgia, "Times New Roman", Times, serif;
 			margin:10px;
 		}
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+    
+    }
     </style>    
   </head>
+
   <body>
+
+
+
     <h1>Paragraph</h1>
     <textarea name="message" id = "message" rows="10" cols="50"></textarea>
     <button onclick="clickButtonHandler()"> Create Wordscloud</button>
-    <canvas id="canvas" width = "1000" height = "1000">
-    <script src = 'main.js'>
-    </script>
-    <script>
-      
-    </script>
+    <canvas id="canvas" width = "1000" height = "1000", style="border:1px solid #000000;">
+    <script src = 'main.js'></script>
+
     
-    
+
   </body>
 </html>
